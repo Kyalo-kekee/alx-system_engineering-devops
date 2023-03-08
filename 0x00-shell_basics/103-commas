@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -1A | sort -df | awk '{printf "%s%s", $0, (NR%2==0)? ORS: ", "}'
