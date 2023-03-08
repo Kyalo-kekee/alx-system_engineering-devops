@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1aF | sed -e 's#/$#, #' -e 's#\n#,#g' | tr -d '\n' | awk 'BEGIN{FS=",";OFS=","} {for (i=1;i<=NF;i++) if ($i ~ /^(\.|[[:alnum:]])/) print $i}' | sort -df | sed -e 's#/$#,#' -e '1s#^#./,#' -e '2s#^#../,#' -e '$a\' -e '$s/,$/\n/'
+ls -1aF | sed -e 's#/$#, #' -e 's#\n#,#g' | tr -d '\n'; echo
