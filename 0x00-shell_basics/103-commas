@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1aF | sed -e 's#/$#, #' -e 's#\n#,#g' | tr -d '\n'; echo
+printf '%s,' * 
